@@ -1,0 +1,703 @@
+header{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+header h1{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 5;
+	font-family: 'Do Hyeon', sans-serif;
+	font-size: 7.7em;
+	font-weight: 100;
+	transition: all ease 0.8s;
+	color: #949393;
+	opacity: 0;
+	transform: translate(-50%, -50%);
+}
+header h1:nth-child(1){
+	transform: translate(calc(-100% - 5px), -200%);
+}
+header h1:nth-child(2){
+	transform: translateY(150%);
+	left: calc(50%  + 5px);
+}
+.header_active h1:nth-child(1){
+	opacity: 1;
+	transform: translate(calc(-100% - 5px), -85%);
+}
+.header_active h1:nth-child(2){
+	opacity: 1;
+	transform: translateY(-25%);
+}
+
+.mainSide{
+	height: 30%;
+	width: 16.666666666667%;
+	right: 0;
+	left: auto;
+	position: fixed;
+	z-index: 5;
+}
+.cube{
+	height: 80px;
+	width: 80px;
+	top: calc(50% - 40px);
+  left: calc(50% - 40px); 
+}
+.front {
+  transform: translateZ(0px); 
+}
+.cube_start{
+	animation: rotateCubeStart 30s infinite linear!important;
+}
+.cube img{
+	height: 80%;
+	filter: invert(70%);
+}
+
+.cube:hover div{
+	background: #c9c9c9;
+	border-color: #fff;
+}
+.cube:hover img{
+	filter: invert(100%);
+	transition: all ease 1s;
+}
+@keyframes rotateCubeStart {
+  from {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  
+  to {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+
+.wrap{
+	position: absolute;
+	left: 0;
+	top: 100vh;
+	width: 100%;
+	z-index: 3;
+}
+.slogan{
+	position: relative;
+	height: 100vh;
+	width: 100%;
+	transform:  scale(0.67);
+	transition: all ease 0.5s;
+	overflow: hidden;
+}
+.slogan img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: -10;
+}
+.slogan_active img{
+	opacity: 0;
+	transition: all ease 0.5s;
+	transition-delay: 1s;
+}
+.slogan h2{
+	position: absolute;
+	font-size: 5em;
+	line-height: 110px;
+	font-weight: 900;
+	text-align: right;
+	width: 70%;
+	right: 17%;
+	top: 50%;
+	transform: translate(100px, -50%);
+	mix-blend-mode: overlay;
+	font-family: 'Do Hyeon', sans-serif;
+	text-transform: uppercase;
+	color: #fff;
+	opacity: 0;
+}
+
+
+.slogan_show{
+	transform: scale(1);
+}
+.slogan_show h2{
+	opacity: 1;
+	transition: all ease 0.5s;
+	transition-delay: 0.2s;
+	transform: translate(0px, -50%);
+}
+.slogan_active h2{
+	opacity: 0.3;
+	transition-delay: 1s;
+}
+
+
+
+
+
+
+.aboutus{
+	position: relative;
+	width: 100%;
+	height: 600px;
+}
+.aboutus h2{
+	position: absolute;
+	top: 100px;
+	left: 50.1%;
+	font-family: 'Do Hyeon', sans-serif;
+	font-weight: 100;
+	font-size: 2.5em;
+	letter-spacing: 2px;
+	color: #cdcdcd;
+	transform: translateY(70px);
+	opacity: 0;
+}
+.aboutus_show h2{
+	transition: all ease 0.5s;
+	transform: translateY(0px);
+	opacity: 1;
+}
+.aboutus p{
+	position: absolute;
+	top: 170px;
+	width: 33%;
+	left: 50.3%;
+	font-size: 1.7em;
+	transform: translateY(70px);
+	opacity: 0;
+}
+.aboutus_show p{
+	transition: all ease 0.5s;
+	transition-delay: 0.3s;
+	transform: translateY(0px);
+	opacity: 1;
+}
+.logo{
+	position: absolute;
+	width: 33.333333333334%;
+	height: 100%;
+	z-index: -1;
+	left: 16.666666666667%;
+	transform: scale(0.7);
+}
+
+.work{
+	position: relative;
+	height: 450px;
+	margin-top: 100px;
+}
+.work h2{
+	position: absolute;
+	font-family: 'Do Hyeon', sans-serif;
+	font-weight: 100;
+	font-size: 2.5em;
+	color: #cdcdcd;
+	left: 17%;
+	transform: translateY(70px);
+	transition: all ease 0.5s;
+	opacity: 0;
+}
+
+.work p{
+	position: absolute;
+	left: 17%;
+	width: 30%;
+	top: 70px;
+	font-size: 1.7em;
+	transform: translateY(70px);
+	transition: all ease 0.5s;
+	transition-delay: 0.3s;
+	opacity: 0;
+}
+.work_show h2,
+.work_show p{
+	transform: translateY(0);
+	opacity: 1;	
+}
+.work div{
+	border: 1px solid #c9c9c9;
+	height: 200px;
+	width: 200px;
+	border-radius: 100px;
+	transition: 1s;
+	position: absolute;
+	left: 66.666%;
+	top: 0;
+	transform: translate(-50%, 50%);
+	opacity: 0;
+}
+
+.work div:nth-child(2){
+	transform: translate(-50%, 50%);
+}
+.work div:nth-child(3){
+	transform: translate(-50%, 50%);
+}
+.work_show div:nth-child(1){
+	opacity: 1;
+	transform: translate(-50%, 0%);
+}
+.work_show div:nth-child(2){
+	opacity: 1;
+	transform: translate(-10%, 70%);
+}
+.work_show div:nth-child(3){
+	opacity: 1;
+	transform: translate(-90%, 70%);
+}
+.work div:nth-child(n) p{
+	position: absolute;
+	font-size: 1.1em;
+	text-align: center;
+	left: 50%;
+	top: 50%;
+}
+.work div:nth-child(1) p{
+	transform: translate(-50%, -100%);
+}
+.work div:nth-child(2) p{
+	transform: translate(-30%, 0%);
+}
+.work div:nth-child(3) p{
+	transform: translate(-70%, 0%);
+}
+.boxlink{
+	position: relative;
+	width: 66.666666666668%;
+	left: 16.666666666667%;
+	height: 440px;
+	overflow: hidden;
+}
+.boxlink a{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 50%;
+	height: 100%;
+	background: #000;
+	z-index: 3;
+	overflow: hidden;
+	transition: all ease 0.5s;
+}
+.boxlink a:nth-child(1){
+	left: 0%;
+	transform: translateX(-100%);
+}
+.boxlink a:nth-child(2){
+	left: 50%;
+	transform: translateX(100%);
+}
+.boxlink_show a:nth-child(n){
+	transform: translateX(0%);
+}
+.boxlink h2{
+	color: #fff;
+	font-family: 'Do Hyeon', sans-serif;
+	mix-blend-mode: overlay;
+	font-size: 4em;
+	line-height: 65px;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	padding: 0 60px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.boxlink img{
+	position: absolute;
+	top: 0px;
+	height: 100%;
+	z-index: -100;
+	transition: all ease 0.3s;
+	transform-origin: top left;
+}
+.boxlink a:nth-child(1) img{
+	height: auto;
+	width: 100%;
+}
+.boxlink h2:after{
+	content: '';
+	position: absolute;
+	background: #fff;
+	top: 0;
+	right: 0;
+	width: 20px;
+	height: 100%;
+	transform: scaleY(0);
+	transform-origin: bottom;
+	transition: all ease 0.2s;	
+}
+.boxlink h2:before{
+	content: '';
+	position: absolute;
+	background: #fff;
+	top: 0;
+	left: 0;
+	width: 20px;
+	height: 100%;
+	transform: scaleY(0);
+	transform-origin: top;
+	transition: all ease 0.2s;	
+}
+.boxlink a:nth-child(1):hover:after{
+	transform: scaleX(1);
+	transition-delay: 0.2s;
+}
+.boxlink a:nth-child(1):hover:before{
+	transform: scaleX(1);
+}
+.boxlink a:nth-child(1):hover h2:before{
+	transform: scaley(1);
+	transition-delay: 0.1s;
+}
+.boxlink a:nth-child(1):hover h2:after{
+	transform: scaley(1);
+	transition-delay: 0.3s;
+}
+.boxlink a:nth-child(2):hover:after{
+	transform: scaleX(1);
+	transition-delay: 0.2s;
+}
+.boxlink a:nth-child(2):hover:before{
+	transform: scaleX(1);
+	transition-delay: 0s;
+}
+.boxlink a:nth-child(2):hover h2:before{
+	transform: scaleY(1);
+	transition-delay: 0.3s;
+}
+.boxlink a:nth-child(2):hover h2:after{
+	transform: scaleY(1);
+	transition-delay: 0.1s;
+}
+.boxlink a:nth-child(2):after{
+	transform-origin: right;
+}
+.boxlink a:nth-child(2):before{
+	transform-origin: left;
+}
+.boxlink a:nth-child(2) h2:after{
+	transform-origin: top;
+}
+.boxlink a:nth-child(2) h2:before{
+	transform-origin: bottom;
+}
+.boxlink a:after{
+	content: '';
+	position: absolute;
+	background: #fff;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 20px;
+	mix-blend-mode: overlay;
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: all ease 0.2s;
+	z-index: 1;
+}
+.boxlink a:before{
+	content: '';
+	position: absolute;
+	background: #fff;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 20px;
+	mix-blend-mode: overlay;
+	transform: scaleX(0);
+	transform-origin: right;
+	transition: all ease 0.2s;
+	z-index: 1;
+}
+
+
+.newsroom{
+	position: relative;
+	width: 100%;
+	height: 400px;
+	background: #fff;
+	border-top:1px solid #c9c9c9;
+}
+.newsroom h2{
+	position: absolute;
+	top: 40px;
+	font-family: 'Do Hyeon', sans-serif;
+	color: #c9c9c9;
+	left: 50%;
+	transform: translate(-50%, 70px);
+	opacity: 0;
+	transition: all ease 0.5s;
+	font-size: 2.2em;
+	font-weight: 100;
+}
+.newsroom h4{
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 70px);
+	opacity: 0;
+	transition: all ease 0.5s;
+	transition-delay: 0.3s;
+	text-align: center;
+	top: 90px;
+	font-weight: 100;
+	font-size: 1em;
+}
+.newsroom_show h2,
+.newsroom_show h4{
+	transform: translate(-50%, 0px);
+	opacity: 1;
+}
+.newsroom a{
+	position: absolute;
+	height: 150px;
+	width: 20%;
+	top: 200px;
+	z-index: 3;
+	transition: all ease 0.4s;
+	opacity: 0;
+}
+
+.newsroom span{
+	position: absolute;
+	content: '';
+	top: 200px;
+	width: 20%;
+	height: 150px;
+	background: #e7e7e7;
+	z-index: 1;
+	left: 10%;
+	transition: all ease 0.5s;
+	opacity: 0;
+}
+.newsroom:hover span{
+	opacity: 1;
+}
+.newsroom a:nth-child(1){
+	left: 10%;
+	transform: translateX(-77px);
+	transition-delay: 0.3s;
+}
+.newsroom a:nth-child(2){
+	left: 30%;
+	transition-delay: 0.2s;
+	transform: translateX(-77px);
+}
+.newsroom a:nth-child(3){
+	left: 50%;
+	transition-delay: 0.1s;
+	transform: translateX(-77px);
+}
+.newsroom a:nth-child(4){
+	left: 70%;
+	transform: translateX(-77px);
+}
+.newsroom_show a:nth-child(n){
+	transform: translateX(0px);
+	opacity: 1;
+}
+.newsroom a img{
+	position: absolute;
+	width: 150px;
+	top: 20px;
+	left: calc(50% - 75px);
+}
+.newsroom a:nth-child(3) img{
+	top: 30px;
+}
+
+.newsroom a p{
+	position: absolute;
+	top: 80px;
+	width: 80%;
+	text-align: center;
+	left: 10%;
+	font-size: 0.9em;
+	padding: 10px 0px;
+	border-top: 1px solid #c9c9c9;
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 730px){
+	header h1{
+		font-size: 2.9em;
+	}
+	header h1:nth-child(1){
+		transform: translate(calc(-100% - 3px), -200%);
+	}
+	header h1:nth-child(2){
+		left: calc(50%  + 3px);
+	}
+	.header_active h1:nth-child(1){
+		transform: translate(calc(-100% - 3px), -85%);
+	}
+
+	.mainSide{
+		display: none;
+	}
+
+	.slogan{
+		height: 200px;
+	}
+
+	.slogan h2{
+		font-size: 1.2em;
+		line-height: 30px;
+	}
+
+	.video-bg{
+		height: 250px;
+		top: -25px;
+	}
+
+	.aboutus h2{
+		top: 0px;
+		left: 10%;
+		font-size: 2em;
+	}
+
+	.aboutus p{
+		top: 100px;
+		width: 80%;
+		left: 10%;
+		font-size: 1.2em;
+	}
+
+	.logo{
+		width: 100%;
+		left: 0%;
+		top: 180px;
+	}
+
+	.work{
+		height: 500px;
+		margin-top: 50px;
+	}
+	.work h2{
+		font-size: 2em;
+		left: 10%;
+		transform: translateY(70px);
+	}
+	.work_show h2,
+	.work_show p{
+		transform: translateY(0);
+		opacity: 1;	
+	}
+	.work p{
+		left: 10%;
+		width: 80%;
+		top: 50px;
+		font-size: 1em;
+	}
+
+	.work div{
+		height: 130px;
+		width: 130px;
+		left: 50%;
+		top: 200px;
+		transition-delay: 0.5s;
+	}
+
+	.boxlink{
+		width: 100%;
+		left: 0%;
+		height: 500px;
+	}
+	.boxlink a{
+		width: 100%;
+		height: 50%;
+	}
+
+	.boxlink a:nth-child(2){
+		left: 0%;
+		top: 50%;
+	}
+
+	.boxlink h2{
+		font-size: 3.3em;
+		line-height: 60px;
+	}
+
+	.newsroom{
+		height: 550px;
+	}
+	.newsroom h2{
+		left: 5%;
+		width: 90%;
+		text-align: center;
+		transform: translate(0%, 70px);
+		font-size: 1.8em;
+	}
+	.newsroom h4{
+		left: 10%;
+		width: 80%;
+		transform: translate(0%, 70px);
+		transition-delay: 0.2s;
+		font-size: 0.9em;
+	}
+	.newsroom_show h2,
+	.newsroom_show h4{
+		transform: translate(0%, 0px);
+		opacity: 1;
+	}
+	.newsroom a{
+		width: 50%;
+	}
+
+	.newsroom span{
+		display: none;	
+	}
+	.newsroom a:nth-child(1){
+		left: 0%;
+		transform: translateY(27px);
+		transition-delay: 0.5s;
+	}
+	.newsroom a:nth-child(2){
+		left: 50%;
+		transition-delay: 0.6s;
+		transform: translateY(27px);
+	}
+	.newsroom a:nth-child(3){
+		left: 0%;
+		top: 350px;
+		transition-delay: 0.7s;
+		transform: translateY(27px);
+	}
+	.newsroom a:nth-child(4){
+		left: 50%;
+		top: 350px;
+		transition-delay: 0.8s;
+		transform: translateY(27px);
+	}
+	.newsroom_show a:nth-child(n){
+		transform: translateY(0px);
+		opacity: 1;
+	}
+	.newsroom a img{
+		width: 60%;
+		left: 20%;
+	}
+
+	.newsroom a p{
+		top: 66px;
+		font-size: 0.9em;
+		padding: 6px 0px;
+	}
+}

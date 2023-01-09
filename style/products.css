@@ -1,0 +1,465 @@
+header{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+header h1{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 5;
+	font-family: 'Do Hyeon', sans-serif;
+	font-size: 7.7em;
+	font-weight: 100;
+	transition: all ease 0.8s;
+	color: #949393;
+	opacity: 0;
+	transform: translate(-50%, -50%);
+}
+header h1:nth-child(1){
+	transform: translate(calc(-100% - 5px), -200%);
+}
+header h1:nth-child(2){
+	transform: translateY(150%);
+	left: calc(50%  + 5px);
+}
+.header_active h1:nth-child(1){
+	opacity: 1;
+	transform: translate(calc(-100% - 5px), -85%);
+}
+.header_active h1:nth-child(2){
+	opacity: 1;
+	transform: translateY(-25%);
+}
+
+.mainSide{
+	height: 30%;
+	width: 16.666666666667%;
+	right: 0;
+	left: auto;
+	position: fixed;
+	z-index: 5;
+}
+.cube{
+	height: 80px;
+	width: 80px;
+	top: calc(50% - 40px);
+  left: calc(50% - 40px); 
+}
+.front {
+  transform: translateZ(0px); 
+}
+.cube_start{
+	animation: rotateCubeStart 30s infinite linear!important;
+}
+.cube img{
+	height: 80%;
+	filter: invert(70%);
+}
+
+.cube:hover div{
+	background: #c9c9c9;
+	border-color: #fff;
+}
+.cube:hover img{
+	filter: invert(100%);
+	transition: all ease 1s;
+}
+@keyframes rotateCubeStart {
+  from {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  
+  to {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+
+
+.wrap{
+	position: absolute;
+	left: 0;
+	top: 100vh;
+	width: 100%;
+	overflow: hidden;
+}
+
+.introduction{
+	position: relative;
+	margin-top: 100px;
+	height: 500px;
+	width: 100%;
+}
+.introduction h2{
+	top: 20px;
+	position: relative;
+	left: calc(50.1% + 30px);
+	transform: translateY(70px);
+	transition: all ease 0.5s;
+	opacity: 0;
+	z-index: 3;
+}
+
+.introduction p{
+	position: relative;
+	top: 40px;
+	left: calc(50.1% + 30px);
+	width: 30%;
+	font-size: 1.2em;
+	transform: translateY(70px);
+	transition: all ease 0.5s;
+	transition-delay: 0.2s;
+	opacity: 0;
+	z-index: 3;
+}
+.introduction h4{
+	position: relative;
+	left: calc(50.1% + 30px);
+	top: 88px;
+	font-size: 1.1em;
+	font-family: 'Do Hyeon', sans-serif;
+	font-weight: 100;
+	transform: translateY(70px);
+	transition: all ease 0.5s;
+	transition-delay: 0.4s;
+	opacity: 0;
+	z-index: 3;
+}
+.introduction ul{
+	top: 100px;
+	position: relative;
+	left: calc(50.1% + 44px);
+	width: 30%;
+	transform: translateY(70px);
+	transition: all ease 0.5s;
+	transition-delay: 0.6s;
+	opacity: 0;
+	z-index: 3;
+	font-size: 1.1em;
+	line-height: 30px;
+}
+.introduction_show h2,
+.introduction_show p,
+.introduction_show h4,
+.introduction_show ul{
+	transform: translateY(0);
+	opacity: 1;
+}
+.introduction img{
+	position: absolute;
+	width: 50.000000000001%;
+}
+.introduction span{
+	position: absolute;
+	width: 16.666666666667%;
+	height: 500px;
+	background: #fff;
+	transition: all ease 0.7s;
+	transition-delay: 0.4s;
+	transform: scaleY(1);
+	transform-origin: bottom;
+	z-index: 0;
+}
+.introduction span:before{
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 100%;
+	top: 0;
+	background:#fff;
+	transition: all ease 0.7s;
+	transition-delay: 0.2s;
+	transform: scaleY(1);
+	transform-origin: bottom;
+}
+.introduction span:after{
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 200%;
+	top: 0;
+	background:#fff;
+	transition: all ease 0.7s;
+	transform: scaleY(1);
+	transform-origin: bottom;
+}
+.introduction_show span,
+.introduction_show span:after,
+.introduction_show span:before{
+	transform: scaleY(0);
+}
+
+
+
+.products{
+	position: relative;
+	width: 100%;
+	text-align: center;
+	z-index: 3;
+}
+.products h1{
+	color: #c9c9c9;
+	position: relative;
+	font-size: 2.8em;
+	opacity: 0;
+	transform: translateY(70px);
+	transition: all ease 0.5s;
+}
+
+.products h3{
+	position: relative;
+	font-weight: 100;
+	width: 50%;
+	margin-left: 25%;
+	margin-top: 20px;
+	margin-bottom: 69px;
+	transform: translateY(70px);
+	transition: all ease 0.5s;
+	transition-delay: 0.2s;
+	opacity: 0;
+}
+
+.products_show h1,
+.products_show h3{
+	transform: translateY(0);
+	opacity: 1;
+}
+.products div{
+	position: relative;
+	height: 300px;
+	width: 100%;
+	margin-bottom: 100px;
+	text-align: left;	
+}
+
+.products div img{
+	height: 300px;
+	position: absolute;
+	right: 55%;
+	top: 0;
+	opacity: 0;
+	transform: translateY(70px);
+	transition: all ease 0.5s;
+}
+
+.products div h2{
+	position: relative;
+	top: 10px;
+	left: 51%;
+	font-family: 'Do Hyeon', sans-serif;
+	font-weight: 100;
+	font-size: 3em;
+	opacity: 0;
+	transform: translateY(70px);
+	transition: all ease 0.5s;
+	transition-delay: 0.1s;
+}
+.products div h4{
+	position: relative;
+	top: 20px;
+	left: 51%;
+	text-transform: uppercase;
+	opacity: 0;
+	transform: translateY(70px);
+	transition: all ease 0.5s;
+	transition-delay: 0.2s;
+}
+.products div p{
+	position: relative;
+	top: 50px;
+	left: 51%;
+	width: 30%;
+	font-size: 1.3em;
+	opacity: 0;
+	transform: translateY(70px);
+	transition: all ease 0.5s;
+	transition-delay: 0.3s;
+}
+.products div a{
+	position: relative;
+	top: 88px;
+	left: 51%;
+	font-size: 1.2em;
+	opacity: 0;
+	transform: translateY(70px);
+	transition: all ease 0.5s;
+	transition-delay: 0.4s;
+}
+.products div a img{
+	position: absolute;
+	width: 25px;
+	height: auto;
+	left: 105%;
+}
+.block_show img,
+.block_show h2,
+.block_show h4,
+.block_show p,
+.block_show a{
+	transform: translateY(0px)!important;
+	opacity: 1!important;
+}
+.products a:hover img{
+	animation: arrow 0.4s ease forwards;
+}
+
+@keyframes arrow{
+	0%{ transform: translateX(0px); }
+	30%{ transform: translateX(15px); }
+	70%{ transform: translateX(0px); }
+	100%{ transform: translateX(15px); }
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 730px){
+	header h1{
+		font-size: 2.9em;
+	}
+	header h1:nth-child(1){
+		transform: translate(calc(-100% - 3px), -200%);
+	}
+	header h1:nth-child(2){
+		left: calc(50%  + 3px);
+	}
+	.header_active h1:nth-child(1){
+		transform: translate(calc(-100% - 3px), -85%);
+	}
+
+	.mainSide{
+		display: none;
+	}
+	.introduction{
+		margin-top: 50px;
+	}
+	.introduction h2{
+		top: 200px;
+		font-size: 1.2em;
+		width: 80%;
+		left: 10%;
+		transform: translateY(70px);
+	}
+
+	.introduction p{
+		top: 210px;
+		left: 10%;
+		width: 80%;
+		font-size: 0.9em;
+	}
+	.introduction ul{
+		top: 250px;
+		left: 15%;
+		width: 80%;
+		font-size: 0.9em;
+		line-height: 20px;
+	}
+
+	.introduction img{
+		width: 100%;
+		max-height: 200px;
+	}
+	.introduction span{
+		width: 33.333333333334%;
+		height: 240px;
+	}
+	.introduction h4{
+		left: 10%;
+		top: 240px;
+		font-size: 0.9em;
+	}
+	.introduction_show h2,
+	.introduction_show p,
+	.introduction_show h4,
+	.introduction_show ul{
+		transform: translateY(0);
+		opacity: 1;
+	}
+
+
+.products h1{
+	font-size: 2em;
+}
+
+.products h3{
+	font-size: 0.9em;
+	width: 80%;
+	margin-left: 10%;
+}
+
+.products_show h1,
+.products_show h3{
+	transform: translateY(0);
+	opacity: 1;
+}
+.products div{
+	position: relative;
+	height: 400px;
+	width: 100%;
+	margin-bottom: 50px;
+	text-align: left;	
+}
+
+.products div img{
+	height: 150px;
+	position: absolute;
+	right: 50%;
+	top: 0;
+	opacity: 0;
+	transform: translate(50%, 70px);
+	transition: all ease 0.5s;
+}
+
+.products div h2{
+	top: 180px;
+	left: 10%;
+	font-size: 2em;
+	transition-delay: 0.5s;
+}
+.products div h4{
+	top: 185px;
+	left: 10%;
+	width: 80%;
+	font-size: 0.9em;
+	transition-delay: 0.6s;
+}
+.products div p{
+	top: 200px;
+	left: 10%;
+	width: 80%;
+	font-size: 0.9em;
+	transition-delay: 0.7s;
+}
+.products div a{
+	position: relative;
+	top: 220px;
+	left: 10%;
+	font-size: 1em;
+	opacity: 0;
+	transform: translateY(70px);
+	transition: all ease 0.5s;
+	transition-delay: 0.8s;
+}
+.products div a img{
+	position: absolute;
+	width: 25px;
+	height: auto;
+	left: 105%;
+}
+.block_show h2,
+.block_show h4,
+.block_show p,
+.block_show a{
+	transform: translateY(0px)!important;
+	opacity: 1!important;
+}
+.block_show img{
+	transform: translate(50%, 0px)!important;
+}
+
+}
